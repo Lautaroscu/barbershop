@@ -10,8 +10,6 @@ import java.util.Set;
 
 @Entity
 
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Barbershop {
@@ -35,5 +33,40 @@ public class Barbershop {
 
     private boolean verified;
 
+    public int getId() {
+        return id;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public Set<ServiceType> getServiceTypeList() {
+        return serviceTypeList;
+    }
+
+    public User getAdmin() {
+        return admin;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public void setAdmin(User admin) {
+        this.admin = admin;
+    }
+
+    public void setServiceTypeList(Set<ServiceType> serviceTypeList) {
+        this.serviceTypeList = serviceTypeList;
+    }
+
+    public void setVerified(boolean verified) {
+        this.verified = verified;
+    }
 
 }
